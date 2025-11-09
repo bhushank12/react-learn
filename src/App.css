@@ -36,3 +36,47 @@
     transform: rotate(360deg);
   }
 }
+
+.add-button {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 8px 20px;
+  text-align: center;
+  font-size: 12px;
+  cursor: pointer;
+  margin-right: 1px;
+}
+
+.delete-button {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 8px 20px;
+  text-align: center;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.to-do-input-value {
+  padding: 6px;
+  font-size: 12px;
+  margin-right: 2px;
+  padding-right: 80px;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.show-item-li {
+  display: flex;
+}
+
+.show-item-span {
+  margin-right: 10px;
+}
