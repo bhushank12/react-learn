@@ -8,7 +8,7 @@ function ToDo() {
 
   return (
     <div>
-      <h2>Listing Items</h2>
+      <h2>Listing Tasks</h2>
       <div>
         <input
           type="text"
