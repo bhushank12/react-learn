@@ -4,7 +4,7 @@ import ShowItem from './ShowItem';
 
 function ToDo() {
   const [items, setItems] = useState([]);
-  const [inputValue, setInputValue] = useState([]);
+  const [inputValue, setInputValue] = useState("");
 
   return (
     <div>
