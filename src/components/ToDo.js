@@ -6,6 +6,21 @@ function ToDo() {
   const [items, setItems] = useState([]);
   const [inputValue, setInputValue] = useState("");
 
+  function addItem() {
+    if(inputValue.trim() === "") return;
+    setItems([...items, inputValue]);
+    setInputValue("");
+  }
+
+  function deleteItem(indexToDelete) {
+    const remainingItems = items.filter((item, index) => index !== indexToDelete);
+    setItems(remainingItems);
+  }
+
+  function setInputValueHandler(event) {
+    setInputValue(event.target.value);
+  }
+
   return (
     <div>
       <h2>Listing Tasks</h2>
@@ -14,11 +29,11 @@ function ToDo() {
           type="text"
           value={inputValue}
           placeholder="Enter Task Name"
-          onChange={e => setInputValue(e.target.value)}
+          onChange={setInputValueHandler}
           className="to-do-input-value"
         />
-        <AddItem items={items} setItems={setItems} inputValue={inputValue} setInputValue={setInputValue} />
-        <ShowItem items={items} setItems={setItems} />
+        <AddItem addItem={addItem} />
+        <ShowItem items={items} deleteItem={deleteItem} />
       </div>
     </div>
   );

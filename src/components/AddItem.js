@@ -1,13 +1,11 @@
-function AddItem({ items, setItems, inputValue, setInputValue }) {
-  function addItem() {
-    if(inputValue.trim() === "") return;
-    setItems([...items, inputValue]);
-    setInputValue("")
+function AddItem({ addItem }) {
+  function addItemHandler() {
+    addItem();
   }
 
   return(
     <button
-      onClick={addItem}
+      onClick={addItemHandler}
       className="add-button"
     >
       Add

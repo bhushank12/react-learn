@@ -1,14 +1,12 @@
-function DeleteItem({ items, setItems, indexToDelete }) {
-  function deleteItem() {
-    if(items.length == 0) return;
-    const remainingItems = items.filter((item, index) => index !== indexToDelete);
-    setItems(remainingItems);
+function DeleteItem({ deleteItem, indexToDelete }) {
+  function deleteItemHandler() {
+    deleteItem(indexToDelete);
   }
 
   return (
     <div>
       <button
-        onClick={deleteItem}
+        onClick={ deleteItemHandler }
         className="delete-button"
       >
         Delete

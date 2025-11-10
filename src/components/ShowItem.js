@@ -1,6 +1,6 @@
 import DeleteItem from "./DeleteItem";
 
-function ShowItem({ items, setItems }) {
+function ShowItem({ items, deleteItem }) {
   return(
     <div>
       {items.length === 0 ? (
@@ -10,7 +10,7 @@ function ShowItem({ items, setItems }) {
           {items.map((item, index) => (
             <li key={index} className="show-item-li">
               <span className="show-item-span">{item}</span>
-              <DeleteItem items={items} setItems={setItems} indexToDelete={index} />
+              <DeleteItem deleteItem={deleteItem} indexToDelete={index} />
             </li>
           ))}
         </ul>
