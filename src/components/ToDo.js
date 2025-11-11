@@ -6,13 +6,13 @@ function ToDo() {
   const [items, setItems] = useState([]);
   const [inputValue, setInputValue] = useState("");
 
-  function addItem() {
+  function addItemHandler() {
     if(inputValue.trim() === "") return;
     setItems([...items, inputValue]);
     clearInput();
   }
 
-  function deleteItem(indexToDelete) {
+  function deleteItemHandler(indexToDelete) {
     const remainingItems = items.filter((item, index) => index !== indexToDelete);
     setItems(remainingItems);
   }
@@ -36,8 +36,8 @@ function ToDo() {
           onChange={setInputValueHandler}
           className="to-do-input-value"
         />
-        <AddItem addItem={addItem} />
-        <ShowItem items={items} deleteItem={deleteItem} />
+        <AddItem addItem={addItemHandler} />
+        <ShowItem items={items} deleteItem={deleteItemHandler} />
       </div>
     </div>
   );
