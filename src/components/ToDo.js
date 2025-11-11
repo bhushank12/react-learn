@@ -9,7 +9,7 @@ function ToDo() {
   function addItem() {
     if(inputValue.trim() === "") return;
     setItems([...items, inputValue]);
-    setInputValue("");
+    clearInput();
   }
 
   function deleteItem(indexToDelete) {
@@ -19,6 +19,10 @@ function ToDo() {
 
   function setInputValueHandler(event) {
     setInputValue(event.target.value);
+  }
+
+  function clearInput() {
+    setInputValue("");
   }
 
   return (
